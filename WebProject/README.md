@@ -1,3 +1,7 @@
+# Conda
+
+conda activate (virtual env)
+
 # Create the Django project
 
 django-admin startproject django_blog .
