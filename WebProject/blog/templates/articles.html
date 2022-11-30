@@ -25,6 +25,11 @@
         <p>Created by: {{article.author}}</p>
         <p>Posted at: {{article.created_at}}</p>
         <a href="http://localhost:8080/blog/articles/{{ article.id }}">Read the article</a>
+        <form action="" method="post_delete">
+           {% csrf_token %}
+        <input type=hidden value="{{ article.id }}" />
+        <input type=submit value="delete" />
+        </form>
         </p>
       </li>
 

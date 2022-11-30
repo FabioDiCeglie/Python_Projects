@@ -21,3 +21,7 @@ python3 manage.py makemigrations
 # Migrate model
 
 python3 manage.py migrate
+
+# Create user
+
+python3 manage.py createsuperuser

@@ -33,6 +33,11 @@ class Article(View):
         form.save()
         return redirect("/blog/articles")
 
+    def post_delete(self,request,id):
+        ArticleModel.objects.filter(id=id).delete()
+        return redirect("/blog/articles")
+
+
 class ArticleDetails(View):
     def get(self, request, id):
         # more result u can use filter here
