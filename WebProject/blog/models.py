@@ -7,3 +7,6 @@ class ArticleModel(models.Model):
     author = models.CharField(max_length=100)
     content = models.TextField()
     createdAt = models.DateTimeField()
+
+    def __str__ (self):
+        return self.title
