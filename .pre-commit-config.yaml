@@ -9,3 +9,11 @@ repos:
     rev: 21.12b0
     hooks:
       - id: black
+  - repo: local
+    hooks:
+      - id: pytest-check
+        name: pytest-check
+        entry: cd BlogProject python3 manage.py test
+        language: system
+        pass_filenames: false
+        always_run: true
