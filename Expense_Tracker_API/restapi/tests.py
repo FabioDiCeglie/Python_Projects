@@ -3,7 +3,6 @@ from restapi import models
 # from unittest import TestCase
 # Create your tests here.
 # Apply TDD approach
-
 class TestModels(TestCase):
     def test_expense(self):
         expense = models.Expense.objects.create(
