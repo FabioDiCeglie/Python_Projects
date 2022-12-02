@@ -34,5 +34,6 @@ jobs:
         run: |
           cd BlogProject
           python3 manage.py test
+          cd ..
           cd Expense_Tracker_API
           python3 manage.py test
