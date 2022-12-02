@@ -25,3 +25,7 @@ python3 manage.py migrate
 # Create user
 
 python3 manage.py createsuperuser
+
+# Run Test
+
+python3 manage.py test
