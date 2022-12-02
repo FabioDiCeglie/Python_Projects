@@ -29,3 +29,11 @@ python3 manage.py createsuperuser
 # Run Test
 
 python3 manage.py test
+
+# Install packages
+
+pip install -r requirements.txt
+
+# Pre commit install
+
+pre-commit install
