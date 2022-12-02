@@ -3,3 +3,4 @@ pytest
 django
 pre-commit
 djangorestframework
+flake8
