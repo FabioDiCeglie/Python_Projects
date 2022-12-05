@@ -1,3 +1,5 @@
-# Simple Blog project (NO CSS)
+# Projects
 
-# ExpenseTrackerAPI with TDD approach
+Simple Blog project (NO CSS)
+
+ExpenseTrackerAPI with TDD approach
