@@ -5,3 +5,4 @@ pre-commit
 djangorestframework
 flake8
 django-filter
+djangorestframework-api-key

@@ -2,6 +2,8 @@ from django.test import TestCase
 from django.urls import reverse
 from restapi import models
 from django.contrib.auth.models import User
+from rest_framework_api_key.models import APIKey
+from rest_framework.test import APIClient
 # from unittest import TestCase
 # Create your tests here.
 # Apply TDD approach
@@ -22,8 +24,11 @@ class TestModels(TestCase):
 
 class TestViews(TestCase):
     def setUp(self):
-        User.objects.create_user("fabiodiceglie", "fa@gmail.com", "fabiofabio")
-        self.client.login(username="fabiodiceglie", password="fabiofabio")
+        # User.objects.create_user("fabiodiceglie", "fa@gmail.com", "fabiofabio")
+        # self.client.login(username="fabiodiceglie", password="fabiofabio")
+        api_key, key = APIKey.objects.create_key(name="expense-service")
+        self.client = APIClient()
+        self.client.credentials(HTTP_AUTHORIZATION=f"Api-Key {key}")
 
     def test_expense_create(self):
         payload = {
