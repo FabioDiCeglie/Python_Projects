@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 from restapi import models
+from django.contrib.auth.models import User
 # from unittest import TestCase
 # Create your tests here.
 # Apply TDD approach
@@ -20,6 +21,10 @@ class TestModels(TestCase):
 
 
 class TestViews(TestCase):
+    def setUp(self):
+        User.objects.create_user("fabiodiceglie", "fa@gmail.com", "fabiofabio")
+        self.client.login(username="fabiodiceglie", password="fabiofabio")
+
     def test_expense_create(self):
         payload = {
             "amount": 50.0,
