@@ -34,3 +34,6 @@ jobs:
           cd ..
           cd Expense_Tracker_API
           python3 manage.py test
+          cd ..
+          cd Graphql_social_media_api
+          python3 manage.py test

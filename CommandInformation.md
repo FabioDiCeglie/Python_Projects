@@ -37,3 +37,7 @@ pip install -r requirements.txt
 # Pre commit install
 
 pre-commit install
+
+# Load data in django project ex:
+
+python manage.py loaddata users.json
