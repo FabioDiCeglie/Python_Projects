@@ -41,3 +41,23 @@ pre-commit install
 # Load data in django project ex:
 
 python manage.py loaddata users.json
+
+# Build Docker Image
+
+docker build -t local/graphql_api:beta .
+
+# Check Docker Image
+
+docker image ls
+
+# Run Docker Image
+
+docker run -p 8000:8000 local/graphql_api:beta
+
+# Stop Dock container
+
+docker container stop (id container)
+
+# List Dock container running
+
+docker container ls
