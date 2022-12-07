@@ -61,3 +61,7 @@ docker container stop (id container)
 # List Dock container running
 
 docker container ls
+
+# Docker compose
+
+docker-compose up
